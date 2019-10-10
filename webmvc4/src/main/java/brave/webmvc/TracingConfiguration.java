@@ -38,7 +38,7 @@ public class TracingConfiguration extends WebMvcConfigurerAdapter {
 
   /** Configuration for how to send spans to Zipkin */
   @Bean Sender sender() {
-    return OkHttpSender.create("http://127.0.0.1:9411/api/v2/spans");
+    return OkHttpSender.create("https://trace-api.newrelic.com/trace/v1?Api-Key=YOUR_NEW_RELIC_API_KEY&Data-Format=zipkin&Data-Format-Version=2");
   }
 
   /** Configuration for how to buffer spans into messages for Zipkin */
